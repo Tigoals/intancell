@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GenBI Komisariat UIN Suska Riau - Energi untuk Negeri</title>
+
+    <!-- Deskripsi SEO -->
+    <meta name="description" 
+          content="Website resmi GenBI Komisariat UIN Suska Riau. Informasi kegiatan, divisi, galeri, dan program beasiswa Bank Indonesia untuk generasi muda. Energi untuk Negeri.">
+
+    <!-- Keyword SEO -->
+    <meta name="keywords" 
+          content="GenBI UIN Suska Riau, GenBI Riau, GenBI Komisariat, Beasiswa Bank Indonesia, GenBI Komsat UIN Suska, Energi untuk Negeri, Organisasi GenBI Riau">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://genbi-uinsuska.vercel.app">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
+    <meta property="og:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri dengan karya, kontribusi, dan gerakan nyata.">
+    <meta property="og:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
+    <meta property="og:url" content="https://genbi-uinsuska.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GenBI UIN Suska Riau">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
+    <meta name="twitter:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri.">
+    <meta name="twitter:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GenBI Komisariat UIN Suska Riau",
+      "url": "https://genbi-uinsuska.vercel.app",
+      "logo": "https://genbi-uinsuska.vercel.app/asset/img/Logo.png",
+      "sameAs": [
+        "https://www.instagram.com/genbi_uinsuska",
+        "https://www.youtube.com"
+      ],
+      "description": "Website profil resmi GenBI Komisariat UIN Suska Riau. Organisasi penerima beasiswa Bank Indonesia dengan semangat Energi untuk Negeri."
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="asset/img/favicon.png" type="image/png">
+
+    <!-- Fonts & CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind Custom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        genbi: {
+                            blue: '#0044cc',
+                            dark: '#002a80',
+                            red: '#ff0000',
+                            redhover: '#cc0000'
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Animasi -->
+    <style>
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-700 bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 group cursor-pointer">
+                    <div class="h-12 w-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                        <img src="asset/img/Logo.png" alt="Logo GenBI" class="w-full h-full object-contain">
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold text-genbi-blue leading-none">IntanCell</h1>
+                        <p class="text-[10px] font-bold text-genbi-red tracking-widest uppercase mt-0.5">Solusi HP Rusak</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Beranda</a>
+                    <a href="#sambutan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Sambutan</a>
+                    <a href="#tentang" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Tentang Kami</a>
+                    <a href="#layanan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Divisi</a>
+                    <a href="#galeri" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Kegiatan</a>
+                    <a href="#kontak" class="px-5 py-2.5 bg-genbi-red text-white rounded-full font-medium hover:bg-genbi-redhover transition shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transform hover:-translate-y-0.5 text-sm lg:text-base">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-genbi-blue focus:outline-none p-2 transition-transform active:scale-95">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Animated -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg transform origin-top transition-all duration-300 ease-in-out scale-y-0 opacity-0 pointer-events-none">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#beranda" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Beranda</a>
+                <a href="#sambutan" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Sambutan</a>
+                <a href="#tentang" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Tentang Kami</a>
+                <a href="#layanan" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Divisi</a>
+                <a href="#galeri" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Kegiatan</a>
+                <a href="#kontak" class="block mt-4 text-center px-5 py-3 bg-genbi-red text-white rounded-lg font-medium hover:bg-genbi-redhover">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative min-h-[90vh] lg:min-h-screen flex items-center pt-20 pb-24 lg:pb-0 overflow-hidden bg-white">
+        
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-50/60 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-red-50/60 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full h-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center h-full">
+                
+                <div class="space-y-6 text-center lg:text-left order-2 lg:order-1 flex flex-col justify-center">
+                    <div class="flex justify-center lg:justify-start reveal-element">
+                        <span class="inline-flex items-center px-4 py-1.5 rounded-full border border-blue-100 bg-blue-50 text-genbi-blue text-xs font-bold tracking-wide uppercase hover:bg-blue-100 transition cursor-default">
+                            <span class="w-2 h-2 bg-genbi-red rounded-full mr-2 animate-pulse"></span>
+                            Pusat Service Handphone
+                        </span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h1 class="reveal-element delay-100 text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.15]">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-genbi-blue to-cyan-500">#IntanCell</span>
+                        </h1>
+                        
+                        <div class="reveal-element delay-200 flex items-center justify-center lg:justify-start gap-3 pt-2">
+                            <div class="h-1 w-12 bg-genbi-red rounded-full"></div>
+                            <h2 class="text-xl md:text-2xl font-bold italic text-genbi-red tracking-wide">
+                                "Servis HP Subang Bergaransi"
+                            </h2>
+                        </div>
+                    </div>
+
+                    <p class="reveal-element delay-300 text-gray-600 text-base md:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+                       Intan Cell memberikan jasa service handphone dan laptop bergaransi dengan harga terjangkau tapi tentunya dengan kualitas perbaikan terbaik.
+                    </p>
+
+                    <div class="reveal-element delay-400 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#tentang" class="group px-8 py-3.5 bg-genbi-blue text-white rounded-lg font-semibold hover:bg-genbi-dark transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                            Kenali Kami
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#kegiatan" class="px-8 py-3.5 border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-genbi-blue hover:text-genbi-blue transition-all duration-300 bg-white flex items-center justify-center transform hover:-translate-y-1">
+                            Lihat Galeri
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal-element delay-200 relative order-1 lg:order-2 hidden lg:flex justify-center lg:justify-end items-center">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-genbi-blue/20 to-genbi-red/20 opacity-30 rounded-[3rem] transform rotate-6 scale-90 blur-md -z-10 animate-pulse"></div>
+                    
+                    <div class="relative w-full max-w-md lg:max-w-full">
+                        <img src="https://www.mflash.id/wp-content/uploads/2022/08/Rectangle-83.png" 
+                             alt="Mahasiswa GenBI UIN Suska" 
+                             class="relative rounded-[2rem] shadow-2xl w-full h-[350px] md:h-[450px] lg:h-[500px] object-cover object-center ring-4 ring-white hover:scale-[1.02] transition duration-500">
+                        
+                        <div class="absolute -bottom-8 -left-8 bg-white p-5 rounded-xl shadow-xl hidden md:block animate-float border border-gray-100 z-20">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-red-50 p-3 rounded-full text-genbi-red text-xl">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 font-semibold uppercase">Lokasi</p>
+                                    <p class="text-base font-bold text-gray-900">Intan Ponsel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-genbi-blue py-12 relative z-10 -mt-2 reveal-element">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white divide-x divide-blue-400/30">
+                <div class="p-2 hover:transform hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-4xl font-bold mb-1">20.366+</h3>
+                    <p class="text-blue-200 text-sm font-medium">Berhasil Diperbaiki</p>
+                </div>
+                <div class="p-2 hover:transform hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-4xl font-bold mb-1">24.309</h3>
+                    <p class="text-blue-200 text-sm font-medium">Total Device</p>
+                </div>
+                <div class="p-2 hover:transform hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-4xl font-bold mb-1">100+</h3>
+                    <p class="text-blue-200 text-sm font-medium">Program Terlaksana</p>
+                </div>
+                <div class="p-2 hover:transform hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-4xl font-bold mb-1">100%</h3>
+                    <p class="text-blue-200 text-sm font-medium">Dedikasi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sambutan Section -->
+    <section id="sambutan" class="py-20 bg-white overflow-hidden relative">
+        <div class="absolute top-20 right-0 p-4 opacity-10">
+            <div class="w-24 h-24 border-t-4 border-r-4 border-genbi-blue rounded-tr-3xl"></div>
+        </div>
+        
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex flex-col lg:flex-row items-center gap-12">
+
+    <!-- FOTO OWNER / TEKNISI -->
+    <div class="w-full lg:w-1/3 flex justify-center lg:justify-end relative order-1 reveal-element">
+      <div class="relative w-72 h-80 lg:w-80 lg:h-[450px]">
+
+        <div class="absolute top-4 left-4 w-full h-full bg-blue-100 rounded-3xl -z-10 rotate-3"></div>
+        <div class="absolute bottom-4 right-4 w-full h-full bg-blue-500 rounded-3xl -z-20 -rotate-2 opacity-10"></div>
+
+        <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+          <img src="https://www.mflash.id/wp-content/uploads/2022/08/Rectangle-81.png"
+               alt="Teknisi Intan Cell"
+               class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-[90%] bg-white/95 backdrop-blur-sm p-4 shadow-lg rounded-xl border-l-4 border-blue-500 text-center">
+          <h4 class="text-lg font-bold text-gray-900">Intan Cell</h4>
+          <p class="text-xs text-blue-600 font-bold uppercase mt-1">Teknisi Profesional & Berpengalaman</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- KONTEN -->
+    <div class="w-full lg:w-2/3 lg:pl-8 order-2">
+
+      <div class="flex items-center gap-2 mb-4 reveal-element delay-100">
+        <div class="h-1 w-10 bg-blue-500"></div>
+        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">Tentang Kami</span>
+      </div>
+
+      <h2 class="reveal-element delay-200 text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+        Solusi Terbaik untuk <br>
+        <span class="text-blue-500 italic">Servis HP Anda</span>
+      </h2>
+
+      <div class="reveal-element delay-300 space-y-4 text-gray-600 text-lg leading-relaxed text-justify">
+        <p>
+          <span class="text-3xl font-serif text-blue-500 float-left mr-2 leading-[0.8]">"</span>
+          Selamat datang di <strong>Intan Cell</strong>, layanan servis HP terpercaya di Subang.
+        </p>
+
+        <p>
+          Kami melayani berbagai perbaikan seperti <strong>ganti LCD, baterai, servis software, hingga perbaikan kerusakan berat</strong> dengan teknisi berpengalaman dan peralatan profesional.
+        </p>
+
+        <p>
+          Dengan komitmen <strong>cepat, aman, dan bergaransi</strong>, kami siap membantu mengembalikan performa gadget Anda seperti baru kembali.
+        </p>
+      </div>
+
+      <!-- TRUST BADGE -->
+      <div class="mt-6 flex flex-wrap gap-4 text-sm">
+        <div class="bg-gray-100 px-3 py-2 rounded-lg">✔ 1000+ HP diperbaiki</div>
+        <div class="bg-gray-100 px-3 py-2 rounded-lg">✔ Garansi servis</div>
+        <div class="bg-gray-100 px-3 py-2 rounded-lg">✔ Sparepart original</div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-8 reveal-element delay-400">
+        <a href="https://wa.me/6281234567890?text=Saya%20mau%20servis%20HP"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition">
+          Konsultasi Gratis via WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+    </section>
+
+<!-- Tentang Section -->
+<section id="tentang" class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- HEADER -->
+    <div class="text-center mb-16 reveal-element">
+      <span class="text-blue-600 font-bold tracking-wider text-sm uppercase">Kenapa Pilih Kami</span>
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2 mb-4">
+        Tentang <span class="text-blue-600">Intan Cell</span>
+      </h2>
+      <div class="h-1.5 w-24 bg-blue-500 mx-auto rounded-full"></div>
+      <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+        Layanan servis HP terpercaya di Subang dengan teknisi berpengalaman, pengerjaan cepat, dan hasil bergaransi.
+      </p>
+    </div>
+
+    <!-- CARD -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- CEPAT -->
+      <div class="reveal-element delay-100 p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
+        <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition duration-300 transform group-hover:rotate-6">
+          ⚡
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition">
+          Servis Cepat
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Proses perbaikan cepat tanpa mengurangi kualitas. Banyak kerusakan bisa selesai dalam hitungan jam.
+        </p>
+      </div>
+
+      <!-- BERGARANSI -->
+      <div class="reveal-element delay-200 p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
+        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-green-600 group-hover:text-white transition duration-300 transform group-hover:rotate-6">
+          🛡️
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-green-600 transition">
+          Bergaransi
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Setiap servis dilengkapi garansi, sehingga Anda tidak perlu khawatir dengan hasil pengerjaan kami.
+        </p>
+      </div>
+
+      <!-- TERPERCAYA -->
+      <div class="reveal-element delay-300 p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
+        <div class="w-16 h-16 bg-yellow-100 text-yellow-500 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-yellow-500 group-hover:text-white transition duration-300 transform group-hover:rotate-6">
+          ⭐
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-yellow-500 transition">
+          Terpercaya
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Sudah menangani ratusan hingga ribuan perangkat dengan kepuasan pelanggan tinggi.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Layanan Section -->
+<section id="layanan" class="py-24 bg-gray-900 text-white relative overflow-hidden">
+
+    <!-- BACKGROUND GLOW -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+        <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-blue-500 blur-3xl animate-pulse"></div>
+        <div class="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-green-500 blur-3xl animate-pulse"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- HEADER -->
+        <div class="mb-12 text-center md:text-left reveal-element">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-3">
+                Layanan Servis <span class="text-blue-400">Intan Cell</span>
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Solusi lengkap untuk semua masalah HP Anda — cepat, aman, dan bergaransi.
+            </p>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- LCD -->
+            <div class="reveal-element delay-100 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-blue-500 flex flex-col hover:-translate-y-2">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-gray-900 rounded-lg text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition">
+                        📱
+                    </div>
+                    <h3 class="text-xl font-bold">Ganti LCD</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">
+                    Layar pecah, blank, atau bergaris? Kami siap ganti LCD dengan kualitas original.
+                </p>
+                <a href="https://wa.me/6281234567890?text=Servis%20LCD"
+                   class="text-blue-400 text-sm font-semibold hover:text-white">
+                    Tanya Harga →
+                </a>
+            </div>
+
+            <!-- BATERAI -->
+            <div class="reveal-element delay-200 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-green-500 flex flex-col hover:-translate-y-2">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-gray-900 rounded-lg text-green-400 group-hover:bg-green-500 group-hover:text-white transition">
+                        🔋
+                    </div>
+                    <h3 class="text-xl font-bold">Ganti Baterai</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">
+                    Baterai cepat habis atau drop? Kami ganti dengan baterai baru berkualitas.
+                </p>
+                <a href="https://wa.me/6281234567890?text=Servis%20Baterai"
+                   class="text-green-400 text-sm font-semibold hover:text-white">
+                    Tanya Harga →
+                </a>
+            </div>
+
+            <!-- SOFTWARE -->
+            <div class="reveal-element delay-300 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-yellow-500 flex flex-col hover:-translate-y-2">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-gray-900 rounded-lg text-yellow-400 group-hover:bg-yellow-500 group-hover:text-white transition">
+                        ⚙️
+                    </div>
+                    <h3 class="text-xl font-bold">Servis Software</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">
+                    Bootloop, lupa pola, atau error sistem? Kami siap memperbaiki dengan aman.
+                </p>
+                <a href="https://wa.me/6281234567890?text=Servis%20Software"
+                   class="text-yellow-400 text-sm font-semibold hover:text-white">
+                    Konsultasi →
+                </a>
+            </div>
+
+            <!-- AIR -->
+            <div class="reveal-element delay-400 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-red-500 flex flex-col hover:-translate-y-2">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-gray-900 rounded-lg text-red-400 group-hover:bg-red-500 group-hover:text-white transition">
+                        💧
+                    </div>
+                    <h3 class="text-xl font-bold">HP Kemasukan Air</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">
+                    HP terkena air? Segera servis untuk mencegah kerusakan total.
+                </p>
+                <a href="https://wa.me/6281234567890?text=Servis%20HP%20Kena%20Air"
+                   class="text-red-400 text-sm font-semibold hover:text-white">
+                    Perbaiki Sekarang →
+                </a>
+            </div>
+
+            <!-- IC -->
+            <div class="reveal-element delay-500 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-purple-500 flex flex-col hover:-translate-y-2">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-gray-900 rounded-lg text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition">
+                        🔧
+                    </div>
+                    <h3 class="text-xl font-bold">Servis IC / Mesin</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">
+                    Kerusakan berat? Kami tangani perbaikan motherboard & IC profesional.
+                </p>
+                <a href="https://wa.me/6281234567890?text=Servis%20IC"
+                   class="text-purple-400 text-sm font-semibold hover:text-white">
+                    Konsultasi →
+                </a>
+            </div>
+
+            <!-- LAPTOP -->
+            <div class="reveal-element delay-600 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-cyan-500 flex flex-col hover:-translate-y-2">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-gray-900 rounded-lg text-cyan-400 group-hover:bg-cyan-500 group-hover:text-white transition">
+                        💻
+                    </div>
+                    <h3 class="text-xl font-bold">Servis Laptop</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">
+                    Laptop lemot atau rusak? Kami juga melayani servis laptop berbagai merk.
+                </p>
+                <a href="https://wa.me/6281234567890?text=Servis%20Laptop"
+                   class="text-cyan-400 text-sm font-semibold hover:text-white">
+                    Tanya →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- GALERI SERVIS -->
+<section id="galeri" class="py-28 bg-gradient-to-b from-slate-900 to-black text-white relative overflow-hidden">
+
+  <!-- Glow Background -->
+  <div class="absolute -top-20 -left-20 w-96 h-96 bg-blue-500/20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-cyan-400/10 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+
+    <!-- HEADER -->
+    <div class="text-center mb-20 reveal-element">
+      <span class="text-cyan-400 font-semibold tracking-widest text-sm uppercase">Hasil Servis</span>
+      <h2 class="text-3xl lg:text-5xl font-bold mt-3 mb-4">
+        Before <span class="text-cyan-400">&</span> After
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Bukti nyata kualitas servis HP di Intan Cell. Dari rusak jadi seperti baru lagi.
+      </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- CARD -->
+      <div class="group relative rounded-2xl overflow-hidden cursor-pointer reveal-element">
+        
+        <img src="https://www.mflash.id/wp-content/uploads/2022/08/Rectangle-80.png"
+             class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+        <div class="absolute bottom-0 p-5">
+          <h3 class="font-bold text-lg">Ganti LCD</h3>
+          <p class="text-sm text-gray-300">Layar pecah → mulus kembali</p>
+        </div>
+
+        <div class="absolute top-4 right-4 bg-red-500 text-xs px-3 py-1 rounded-full font-semibold">
+          BEFORE
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="group relative rounded-2xl overflow-hidden cursor-pointer reveal-element">
+        
+        <img src="https://www.mflash.id/wp-content/uploads/2022/08/Rectangle-82.png"
+             class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+        <div class="absolute bottom-0 p-5">
+          <h3 class="font-bold text-lg">Hasil Servis</h3>
+          <p class="text-sm text-gray-300">Seperti HP baru lagi</p>
+        </div>
+
+        <div class="absolute top-4 right-4 bg-green-500 text-xs px-3 py-1 rounded-full font-semibold">
+          AFTER
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="group relative rounded-2xl overflow-hidden cursor-pointer reveal-element">
+        
+        <img src="https://www.mflash.id/wp-content/uploads/2022/08/Rectangle-81.png"
+             class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+        <div class="absolute bottom-0 p-5">
+          <h3 class="font-bold text-lg">Servis Mesin</h3>
+          <p class="text-sm text-gray-300">Mati total → nyala normal</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-16 reveal-element">
+      <a href="https://wa.me/6281234567890"
+         class="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full font-semibold shadow-lg hover:scale-105 transition">
+        Konsultasi Gratis Sekarang
+      </a>
+    </div>
+
+  </div>
+</section>
+
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 flex items-center justify-center p-4 md:p-10 backdrop-blur-sm transition-all duration-300 overflow-hidden">
+        <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-4xl hover:text-gray-400 transition-colors z-[110]">
+            &times;
+        </button>
+        
+        <div class="relative max-w-5xl w-full flex flex-col items-center">
+            <img id="modalImg" src="" alt="" class="max-h-[80vh] w-auto rounded-lg shadow-2xl object-contain">
+            <p id="modalCaption" class="text-white text-lg md:text-xl mt-6 font-medium text-center"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-900 text-gray-300 border-t border-gray-800 reveal-element">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-12 md:gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                         <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center p-1 hover:rotate-12 transition duration-300">
+                             <img src="asset/img/Logo.png" alt="Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                             <span class="text-xl font-bold text-white block">Intan Cell</span>
+                             <span class="text-xs text-gray-400">Solusi HP Rusak</span>
+                        </div>
+                    </div>
+                   <p class="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
+  HP rusak? Intan Cell siap bantu! Servis cepat, hasil rapi, dan bergaransi. Mulai dari ganti LCD, baterai, hingga perbaikan mesin—semua ditangani teknisi berpengalaman dengan harga terjangkau di Subang.
+</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/genbi_uinsuska/" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@genbiriau-generasibaruindo3216" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-youtube"></i></a>
+                        <a href="https://x.com/Genbiriau_" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Navigasi</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#beranda" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Beranda</a></li>
+                        <li><a href="#sambutan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Sambutan</a></li>
+                        <li><a href="#tentang" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Tentang Kami</a></li>
+                        <li><a href="#divisi" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Struktur Organisasi</a></li>
+                        <li><a href="#galeri" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Dokumentasi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-genbi-red animate-bounce"></i>
+                            <span>UIN Sultan Syarif Kasim Riau,<br>Jl. HR. Soebrantas No. 155, Pekanbaru, Riau.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-genbi-red"></i>
+                            <span class="hover:text-white cursor-pointer transition">uinsuskagenbi@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black py-6 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+               <p>&copy; <span id="year"></span> Intan Ponsel Jasa Service HP Subang. All rights reserved.</p>
+
+                <p class="flex items-center gap-1">
+                    Support with 
+                    <i class="fas fa-heart text-red-500 mx-1 animate-pulse"></i> 
+                    for Indonesia • by 
+                    <a href="https://candilkuya.com" 
+                       target="_blank" 
+                       class="text-blue-400 hover:underline">
+                       Candil Kuya
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalCaption = document.getElementById('modalCaption');
+
+    function openModal(imageSrc, captionText) {
+        modalImg.src = imageSrc;
+        modalCaption.innerText = captionText;
+        modal.classList.remove('hidden');
+        // Mencegah scroll pada body saat modal terbuka
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.add('hidden');
+        // Mengembalikan scroll pada body
+        document.body.style.overflow = 'auto';
+    }
+
+    // Menutup modal jika user klik di area luar gambar (overlay hitam)
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Menutup modal dengan tombol ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") {
+            closeModal();
+        }
+    });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+        
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            // Animasi Toggle Menu
+            menu.classList.toggle('scale-y-0');
+            menu.classList.toggle('opacity-0');
+            menu.classList.toggle('pointer-events-none');
+            
+            // State Terbuka
+            menu.classList.toggle('scale-y-100');
+            menu.classList.toggle('opacity-100');
+            menu.classList.toggle('pointer-events-auto');
+        });
+        
+        // Menutup menu saat link diklik
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Kembalikan ke state tertutup
+                menu.classList.add('scale-y-0', 'opacity-0', 'pointer-events-none');
+                menu.classList.remove('scale-y-100', 'opacity-100', 'pointer-events-auto');
+            });
+        });
+
+        // Script Animasi Scroll (Intersection Observer)
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-element');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>
